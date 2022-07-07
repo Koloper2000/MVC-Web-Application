@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes"?>
+<SpisakSatnica>
+  <Satnica>
+    <Vreme>15:00</Vreme>
+  </Satnica>
+  <Satnica>
+    <Vreme>15:30</Vreme>
+  </Satnica>
+  <Satnica>
+    <Vreme>16:00</Vreme>
+  </Satnica>
+  <Satnica>
+    <Vreme>16:30</Vreme>
+  </Satnica>
+  <Satnica>
+    <Vreme>17:00</Vreme>
+  </Satnica>
+  <Satnica>
+    <Vreme>17:30</Vreme>
+  </Satnica>
+  <Satnica>
+    <Vreme>18:00</Vreme>
+  </Satnica>
+  <Satnica>
+    <Vreme>18:30</Vreme>
+  </Satnica>
+</SpisakSatnica>

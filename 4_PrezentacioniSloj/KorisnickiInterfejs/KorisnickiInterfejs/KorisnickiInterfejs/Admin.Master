@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="KorisnickiInterfejs.Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    PLAN TRENINGA
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" >Odjavi se</asp:LinkButton>
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" OnMenuItemClick="NavigationMenu_MenuItemClick">
+                    <Items>
+                        <asp:MenuItem Text="Vrste Treninga" 
+                            Value="VrsteTreninga">
+                            <asp:MenuItem NavigateUrl="~/VrstaUnos.aspx" 
+                                Text="Unos vrste treninga" Value="Unos vrste treninga">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/VrstaTabelarni.aspx" Text="Prikaz svih vrsta treninga" 
+                                Value="Prikaz svih vrsta treninga"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/VrstaTabelaEdit.aspx" 
+                                Text="Izmena i brisanje vrste treninga" Value="Izmena i brisanje vrste">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/VrstaStampa.aspx" Text="Stampa spiska vrsta treninga" 
+                                Value="Stampa spiska vrsta treninga"></asp:MenuItem>
+                            
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Planovi" 
+                            Value="Planovi">
+                            <asp:MenuItem NavigateUrl="~/PlanUnos.aspx" Text="Unos plana treninga" 
+                                Value="Unos plana treninga"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/PlanTabelarni.aspx" Text="Prikaz svih planova treninga" 
+                                Value="Prikaz svih planova treninga"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/PlanStampa.aspx" Text="Stampa spiska planova treninga" 
+                                Value="Stampa spiska planova treninga"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/PlanTabelaEdit.aspx" Text="Izmena i brisanje planova treninga" 
+                                Value="Izmena i brisanje planova treninga"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
+

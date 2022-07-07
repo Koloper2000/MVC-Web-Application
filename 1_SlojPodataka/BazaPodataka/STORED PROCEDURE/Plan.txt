@@ -1,0 +1,78 @@
+﻿USE [PlanTreninga]
+GO
+
+CREATE PROCEDURE [DajSvePlanoveSaJoin]
+AS
+Select CelokupanPlan.Datum, CelokupanPlan.Vreme, CelokupanPlan.Opis, Vrsta.NazivTreninga as NazivTreninga from CelokupanPlan inner join Vrsta on CelokupanPlan.IDVrste = Vrsta.IDVrste
+GO
+
+CREATE PROCEDURE [DajPlanovePoDatumu](
+@Datum date)
+AS
+Select CelokupanPlan.Datum, CelokupanPlan.Vreme, CelokupanPlan.Opis, Vrsta.NazivTreninga as NazivTreninga from CelokupanPlan inner join Vrsta on CelokupanPlan.IDVrste = Vrsta.IDVrste where CelokupanPlan.Datum = @Datum
+GO
+
+CREATE PROCEDURE [DodajNoviPlan]( 
+@Datum date,
+@Vreme nvarchar(5),
+@Opis text,
+@IDVrste int)
+AS
+BEGIN
+Insert into CelokupanPlan(Datum, Vreme, Opis, IDVrste) values (@Datum, @Vreme, @Opis, @IDVrste)
+END
+GO
+
+
+CREATE PROCEDURE [IzmeniPlan](
+@StariIdPlana int,
+@Datum date,
+@Vreme nvarchar(5),
+@Opis text,
+@IDVrste int)
+AS
+BEGIN
+Update CelokupanPlan set Datum=@Datum, Vreme=@Vreme, Opis=@Opis, IDVrste=@IDVrste where IDPlan=@StariIdPlana
+END
+GO
+
+
+CREATE PROCEDURE [ObrisiPlan](
+@IDPlan int)
+AS
+BEGIN
+Delete from CelokupanPlan where IDPlan=@IDPlan
+END
+GO
+
+
+CREATE PROCEDURE [DajPlanPremaDatumuIVremenu](
+@Datum date,
+@Vreme nvarchar(5))
+AS
+BEGIN
+SELECT * FROM CelokupanPlan WHERE Datum = @Datum AND Vreme = @Vreme
+END
+GO
+
+
+CREATE PROCEDURE [DajPlanPoId](
+@IDPlan int)
+AS
+Select * from CelokupanPlan where CelokupanPlan.IDPlan = @IDPlan
+GO
+
+CREATE PROCEDURE [DajNazivTreningaPoId](
+@IDVrste int)
+AS
+Select * from Vrsta where Vrsta.IDVrste = @IDVrste
+GO
+
+
+CREATE PROCEDURE [ObrisiPlanNakonIstekaRoka]
+AS
+BEGIN
+DELETE FROM CelokupanPlan WHERE Datum < DATEADD(day, -7, GETDATE())
+END
+GO
+

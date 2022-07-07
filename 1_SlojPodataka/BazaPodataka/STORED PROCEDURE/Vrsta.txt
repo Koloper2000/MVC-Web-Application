@@ -1,0 +1,52 @@
+﻿USE [PlanTreninga]
+GO
+
+CREATE PROCEDURE [DajSveVrste]
+AS
+Select * from Vrsta
+GO
+
+CREATE PROCEDURE [DajVrstuPoNazivu](
+@NazivTreninga nvarchar(30))
+AS
+BEGIN
+SELECT * FROM Vrsta WHERE Vrsta.NazivTreninga = @NazivTreninga
+END
+GO
+
+
+CREATE PROCEDURE [DodajNovuVrstu]( 
+@NazivTreninga nvarchar(30))
+AS
+BEGIN
+Insert into Vrsta(NazivTreninga) values (@NazivTreninga)
+END
+GO
+
+
+CREATE PROCEDURE [ObrisiVrstu](
+@NazivTreninga nvarchar(30))
+AS
+BEGIN
+Delete from Vrsta where NazivTreninga=@NazivTreninga
+END
+GO
+
+
+CREATE PROCEDURE [IzmeniVrstu](
+@StariId int,
+@NazivTreninga nvarchar(30))
+AS
+BEGIN
+Update Vrsta set NazivTreninga=@NazivTreninga where IDVrste=@StariId
+END
+GO
+
+
+CREATE PROCEDURE [DajIdPremaNazivuTreninga]
+( @NazivTreninga nvarchar(30)
+)
+AS
+SELECT IDVrste FROM Vrsta WHERE NazivTreninga = @NazivTreninga
+GO
+

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="KlasePodataka.KorisnikDB">
+    <Position X="6.5" Y="1.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>CAAAgAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>KorisnikDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KlasePodataka.Plan">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAABAAgAAEAABACAASAAAAAAAABAQA=</HashCode>
+      <FileName>Plan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KlasePodataka.PlanDB">
+    <Position X="1.25" Y="4" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAhQAgAgAAAC4AAEAAAAAAAAAQAAAABAAAAAAgAAA=</HashCode>
+      <FileName>PlanDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KlasePodataka.PlanLista">
+    <Position X="1.25" Y="8.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAEAAAgAABAAQAAAAAAAAAA=</HashCode>
+      <FileName>PlanLista.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KlasePodataka.Vrsta">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAIAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Vrsta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KlasePodataka.VrstaDB">
+    <Position X="11.75" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAEgAAAAAABAAAAAAAAAAACAAIAAAAAAAAAAgAA=</HashCode>
+      <FileName>VrstaDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KlasePodataka.VrstaLista">
+    <Position X="11.75" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAgAABAAQIAAEAAAAAA=</HashCode>
+      <FileName>VrstaLista.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
